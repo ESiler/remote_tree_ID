@@ -5,11 +5,19 @@
 ## Installation
 
 1. Clone this repo:
-    git clone fp
+> git clone https://github.com/ESiler/remote_tree_ID
 
 ## Usage
 
-## Repo components (with descriptions)
+## List of repository components, with descriptions
+00_get_campus_tree_gis_data.ipynb | A script that pulls detailed MSU campus tree data from arcgis
+01_Train_Test_Split.ipynb | This script does a whole bunch of crap, idk.
+02_shuffle_files_for_yolo.sh |
+03_train_model.ipynb |   
+04_get_single_tree_pix.ipynb | Downloads all individual tree images from ESRI.
+05_process_tree_pix.ipynb | 
+06_single_tree_models.ipynb | Runs single tree charaterization models using the principle components formed in script 05. 
+misc | These are supplementary scripts I used for informational purposes but that are not important parts of the pipeline.
 
 ## Demo
     - utube link?
@@ -17,7 +25,7 @@
 ## Data Access Statement
 Tree details and location data were created and provided by the MSU herbarium and are publically available at:
 
-Remote sensing data were created by [usda?], provided by ESRI, and are available at:
+Remote sensing data sources: Esri, DigitalGlobe, GeoEye, i-cubed, USDA FSA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community
 
 ## Contact
  - silerele@umich.edu
