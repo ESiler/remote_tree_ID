@@ -8,21 +8,16 @@ read train_zone
 echo "What is your validation zone? Enter zone_A, zone_B, etc."
 read val_zone
 
-# Training labels
+# Label directories
 source_dir_l="../../../Plot_Labels/train"
 destination_l_t="../YOLO_DATASET_TMP/labels/train"
-
-# Training images
-source_dir_p="../../../Plot_Images/train"
-destination_p_t="../YOLO_DATASET_TMP/images/train"
-
-# Validation labels
-source_dir_l_v="../../../Plot_Labels/train"
 destination_l_v="../YOLO_DATASET_TMP/labels/val"
 
-# Validation images
-source_dir_p_v="../../../Plot_Images/train"
+# Image directories
+source_dir_p="../../../Plot_Images/train"
+destination_p_t="../YOLO_DATASET_TMP/images/train"
 destination_p_v="../YOLO_DATASET_TMP/images/val"
+
 
 # Delete all files in the destination directories before creating new symlinks
 rm -f ${destination_l_t}/*
@@ -62,6 +57,7 @@ do
   ln -s "$source_image" "$destination_image"
 done < "../Zone_Plots/${val_zone}.txt"
 
-echo "Thanks! Your training zone is $train_zone and your validation zone is $val_zone"
+echo "Thanks! Your training zones are $train_zone and your validation zones are $val_zone"
+echo "Your data has been prepped to run YOLO!"
 
 

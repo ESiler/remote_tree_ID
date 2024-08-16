@@ -1,15 +1,26 @@
-# Training a Computer Vision Model on Campus Tree Data
+# In Which I Attempt To Train a Computer Vision Model to Find and Characterize Trees Using Michigan State University's Campus Tree Data
 
-## Description
+## Description/Intro
+Welcome to my remote tree ID repo! Thanks for checking it out!
 
 ## Installation
 
 1. Clone this repo:
+ -- Note: this code was designed using python 3.9 and Linux Mint. 
 > git clone https://github.com/ESiler/remote_tree_ID
+> cd remote_tree_ID
+2. Create and an appropriate virtual environment, e.g.:
+> python -m venv ../tree_env
 
-## Usage
+3. Activate virtual environment, e.g.:
+> source ../tree_env/bin/activate
 
-## List of repository components, with descriptions
+4. Load dependencies, e.g.:
+> pip install -r requirements.txt
+
+5. You can run the scripts in order, or go to the one you're interested in Please feel free to reach out with any questions!
+
+## Repository Table of Contents:
 00_get_campus_tree_gis_data.ipynb | A script that pulls detailed MSU campus tree data from arcgis
 01_Train_Test_Split.ipynb | This script does a whole bunch of crap, idk.
 02_shuffle_files_for_yolo.sh |
@@ -23,9 +34,13 @@ misc | These are supplementary scripts I used for informational purposes but tha
     - utube link?
 
 ## Data Access Statement
-Tree details and location data were created and provided by the MSU herbarium and are publically available at:
+# Campus Tree Data
+Data sources: Tree details and location data were created and provided by Michigan State University's Beal Botanical Garden and Campus Arboretum.
+Data access: These data are publically available at https://msugis.maps.arcgis.com/apps/webappviewer/index.html?id=9524d5364b204395b04823431294065a
 
-Remote sensing data sources: Esri, DigitalGlobe, GeoEye, i-cubed, USDA FSA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community
+# Remote Sensing Data
+Data sources: Esri, DigitalGlobe, GeoEye, i-cubed, USDA FSA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community
+Data location: These data are publically available at https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9
 
 ## Contact
  - silerele@umich.edu
