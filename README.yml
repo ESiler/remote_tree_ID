@@ -1,46 +1,40 @@
-# In Which I Attempt To Train a Computer Vision Model to Find and Characterize Trees Using Michigan State University's Campus Tree Data
+title: "In Which I Attempt To Train a Computer Vision Model to Find and Characterize Trees Using Michigan State University's Campus Tree Data"
 
-## Description/Intro
-Welcome to my remote tree ID repo! Thanks for checking it out!
+description: |
+  Welcome to my remote tree ID repo!
 
-## Installation
+installation:
+  steps:
+    - Clone this repo (note: this code was designed using Python 3.9 and Linux Mint):
+      - `git clone https://github.com/ESiler/remote_tree_ID`
+      - `cd remote_tree_ID`
+    - Create and activate a virtual environment, e.g.:
+      - `python -m venv ../tree_env`
+      - `source ../tree_env/bin/activate`
+    - Load dependencies:
+      - `pip install -r requirements.txt`
+    - You can run the scripts in order or jump to the one you're interested in. Please feel free to reach out with any questions!
 
-1. Clone this repo:
- -- Note: this code was designed using python 3.9 and Linux Mint. 
-> git clone https://github.com/ESiler/remote_tree_ID
-> cd remote_tree_ID
-2. Create and an appropriate virtual environment, e.g.:
-> python -m venv ../tree_env
+repository_contents:
+  - "00_get_campus_tree_gis_data.ipynb: Pulls detailed MSU campus tree data from ArcGIS."
+  - "01_Train_Test_Split.ipynb: This script performs the train/test split and does lots of other data processing and formatting."
+  - "02_shuffle_files_for_yolo.sh: Script for shuffling files for YOLO by making symlinks. This allows you to do multiple train/test splits without disturbing the actual files"
+  - "03_train_model.ipynb: Jupyter notebook script for training the model."
+  - "04_get_single_tree_pix.ipynb: Downloads individual tree images from ESRI."
+  - "05_process_tree_pix.ipynb: Processes the downloaded tree images."
+  - "06_single_tree_models.ipynb: Runs single tree characterization models using the principle components formed in script 05."
+  - "Y1_run_yolo.py": This script allows you to train yolo models from the command line, which is useful for running them on Great Lakes or other compute clusters.
+  - "misc: Supplementary scripts such as exporatory data analysis that are informationally useful but not critical to the pipeline."
 
-3. Activate virtual environment, e.g.:
-> source ../tree_env/bin/activate
 
-4. Load dependencies, e.g.:
-> pip install -r requirements.txt
+data_access:
+  campus_tree_data:
+    sources: "Tree details and location data provided by Michigan State University's Beal Botanical Garden and Campus Arboretum."
+    access: "Data publicly available at https://msugis.maps.arcgis.com/apps/webappviewer/index.html?id=9524d5364b204395b04823431294065a"
+  
+  remote_sensing_data:
+    sources: "Esri, DigitalGlobe, GeoEye, i-cubed, USDA FSA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community."
+    access: "Data publicly available at https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9"
 
-5. You can run the scripts in order, or go to the one you're interested in Please feel free to reach out with any questions!
-
-## Repository Table of Contents:
-00_get_campus_tree_gis_data.ipynb | A script that pulls detailed MSU campus tree data from arcgis
-01_Train_Test_Split.ipynb | This script does a whole bunch of crap, idk.
-02_shuffle_files_for_yolo.sh |
-03_train_model.ipynb |   
-04_get_single_tree_pix.ipynb | Downloads all individual tree images from ESRI.
-05_process_tree_pix.ipynb | 
-06_single_tree_models.ipynb | Runs single tree charaterization models using the principle components formed in script 05. 
-misc | These are supplementary scripts I used for informational purposes but that are not important parts of the pipeline.
-
-## Demo
-    - utube link?
-
-## Data Access Statement
-# Campus Tree Data
-Data sources: Tree details and location data were created and provided by Michigan State University's Beal Botanical Garden and Campus Arboretum.
-Data access: These data are publically available at https://msugis.maps.arcgis.com/apps/webappviewer/index.html?id=9524d5364b204395b04823431294065a
-
-# Remote Sensing Data
-Data sources: Esri, DigitalGlobe, GeoEye, i-cubed, USDA FSA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community
-Data location: These data are publically available at https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9
-
-## Contact
- - silerele@umich.edu
+contact:
+  email: "silerele@umich.edu"
